@@ -1,38 +1,31 @@
-<ion-header>
-<ion-toolbar color="primary">
-    <ion-buttons slot="start">
-    <ion-button (click)="goBack()">
-        <ion-icon name="arrow-back"></ion-icon>
-    </ion-button>
-    </ion-buttons>
-    <ion-title>Transacciones</ion-title>
-</ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Transacciones</ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-content>
-<app-filter-bar
-    (tipoChanged)="onTipoChanged($event)"
-    (categoriaChanged)="onCategoriaChanged($event)"
-    (searchChanged)="onSearchChanged($event)">
-</app-filter-bar>
+    <app-filter-bar (tipoChanged)="onTipoChanged($event)" (categoriaChanged)="onCategoriaChanged($event)"
+        (searchChanged)="onSearchChanged($event)">
+    </app-filter-bar>
 
-  <ion-list *ngIf="filteredTransacciones.length > 0">
-    <app-transaction-item
-      *ngFor="let t of filteredTransacciones"
-    [transaccion]="t"
-    (itemClicked)="goToDetalle($event)">
-    </app-transaction-item>
-</ion-list>
+    <ion-list *ngIf="filteredTransacciones.length > 0">
+        <app-transaction-item *ngFor="let t of filteredTransacciones" [transaccion]="t"
+            (itemClicked)="goToDetalle($event)">
+        </app-transaction-item>
+    </ion-list>
 
-<app-empty-state
-    *ngIf="filteredTransacciones.length === 0"
-    mensaje="No hay transacciones"
-    subtitulo="Toca el botón + para agregar una"
-    icono="receipt-outline">
-</app-empty-state>
+    <app-empty-state *ngIf="filteredTransacciones.length === 0" mensaje="No hay transacciones"
+        subtitulo="Toca el botón + para agregar una" icono="receipt-outline">
+    </app-empty-state>
 
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goToNueva()">
-    <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-</ion-fab>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="goToNueva()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>

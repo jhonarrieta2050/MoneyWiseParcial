@@ -1,19 +1,78 @@
+ion-card {
+    --background: #ffffff;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid #F0F1F3;
+    margin: 0;
+}
+
 .card-content {
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
 }
+
 .card-title {
-font-size: 0.85rem;
-opacity: 0.8;
-margin: 0;
+    font-size: 0.8rem;
+    color: #A0A8B0;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
+
 .card-value {
-font-size: 1.4rem;
-font-weight: bold;
-margin: 4px 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 6px 0 0;
+    color: #2D3436;
+    letter-spacing: -0.02em;
 }
+
+.card-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(124, 156, 219, 0.1);
+
+    &[data-color="success"] {
+        background: rgba(129, 201, 158, 0.12);
+
+        .card-icon {
+            color: #81C99E;
+        }
+    }
+
+    &[data-color="danger"] {
+        background: rgba(232, 145, 140, 0.12);
+
+        .card-icon {
+            color: #E8918C;
+        }
+    }
+
+    &[data-color="primary"] {
+        background: rgba(124, 156, 219, 0.12);
+
+        .card-icon {
+            color: #7C9CDB;
+        }
+    }
+
+    &[data-color="warning"] {
+        background: rgba(242, 201, 125, 0.12);
+
+        .card-icon {
+            color: #F2C97D;
+        }
+    }
+}
+
 .card-icon {
-font-size: 2.5rem;
-opacity: 0.7;
+    font-size: 1.6rem;
+    color: #7C9CDB;
 }

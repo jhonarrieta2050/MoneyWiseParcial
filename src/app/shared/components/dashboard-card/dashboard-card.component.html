@@ -1,11 +1,13 @@
-<ion-card [color]="color">
-<ion-card-content>
-    <div class="card-content">
-    <div class="card-info">
-        <p class="card-title">{{ titulo }}</p>
-        <h2 class="card-value">{{ valor | currencyFormat }}</h2>
-    </div>
-    <ion-icon [name]="icono" class="card-icon"></ion-icon>
-    </div>
-</ion-card-content>
+<ion-card>
+    <ion-card-content>
+        <div class="card-content">
+            <div class="card-info">
+                <p class="card-title">{{ titulo }}</p>
+                <h2 class="card-value">{{ valor | currencyFormat }}</h2>
+            </div>
+            <div class="card-icon-wrapper" [attr.data-color]="color">
+                <ion-icon [name]="icono" class="card-icon"></ion-icon>
+            </div>
+        </div>
+    </ion-card-content>
 </ion-card>

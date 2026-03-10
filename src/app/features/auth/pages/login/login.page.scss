@@ -1,41 +1,74 @@
+:host {
+  --background: #ffffff;
+}
+
 .login-container {
   max-width: 400px;
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 60px 24px 24px;
 }
 
 .logo-section {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 
   .logo-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--ion-color-primary);
+    background: rgba(124, 156, 219, 0.1);
+    padding: 20px;
+    border-radius: 24px;
+    display: inline-block;
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 8px 0 4px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 16px 0 6px;
+    color: #2D3436;
+    letter-spacing: -0.02em;
   }
 
   p {
-    color: var(--ion-color-medium);
+    color: #A0A8B0;
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+}
+
+ion-list {
+  background: transparent;
+  margin-bottom: 8px;
+
+  ion-item {
+    --background: #F7F8FA;
+    --border-color: transparent;
+    --border-radius: 14px;
+    margin-bottom: 12px;
+    --padding-start: 16px;
+    --inner-padding-end: 16px;
   }
 }
 
 .action-buttons {
-  padding: 16px 0;
+  padding: 24px 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+
+  ion-button {
+    --border-radius: 14px;
+    font-weight: 600;
+    min-height: 50px;
+  }
 }
 
 ion-button[disabled] {
-  --opacity: 0.5;
+  --opacity: 0.4;
 }
 
 ion-text[color="danger"] p {
-  margin: 4px 0 8px 0;
-  font-size: 12px;
+  margin: 2px 0 4px 4px;
+  font-size: 0.75rem;
+  color: var(--ion-color-danger);
 }

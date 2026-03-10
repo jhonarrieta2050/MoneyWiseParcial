@@ -1,1 +1,11 @@
-.gallery-content { display: flex; justify-content: center; padding: 16px; img { max-width: 100%; border-radius: 8px; } }
+.gallery-content {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+
+    img {
+        max-width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+}

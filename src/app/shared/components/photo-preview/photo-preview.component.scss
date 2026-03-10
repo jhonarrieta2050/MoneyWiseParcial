@@ -1,6 +1,17 @@
 .photo-preview {
-position: relative;
-display: inline-block;
-img { width: 100%; max-width: 200px; border-radius: 8px; }
-ion-button { position: absolute; top: -8px; right: -8px; }
+    position: relative;
+    display: inline-block;
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    ion-button {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+    }
 }

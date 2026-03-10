@@ -3,9 +3,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 60px 32px;
   text-align: center;
-  ion-icon { font-size: 4rem; color: var(--ion-color-medium); margin-bottom: 12px; }
-  h3 { color: var(--ion-color-medium); margin: 0 0 8px; }
-  p { color: var(--ion-color-medium); font-size: 0.9rem; }
+
+  ion-icon {
+    font-size: 3.5rem;
+    color: #C8CDD3;
+    margin-bottom: 16px;
+    background: #F7F8FA;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  h3 {
+    color: #2D3436;
+    font-weight: 600;
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+  }
+
+  p {
+    color: #A0A8B0;
+    font-size: 0.9rem;
+    max-width: 260px;
+  }
 }

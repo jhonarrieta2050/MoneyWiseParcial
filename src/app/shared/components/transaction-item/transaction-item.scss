@@ -1,6 +1,33 @@
 ion-item {
-  --padding-start: 12px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  --border-color: #F0F1F3;
+  --min-height: 72px;
+
+  ion-icon[slot="start"] {
+    background: #F7F8FA;
+    padding: 8px;
+    border-radius: 12px;
+    margin-right: 12px;
+  }
+
+  ion-label {
+    h3 {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2D3436;
+    }
+
+    p {
+      color: #A0A8B0;
+      font-size: 0.82rem;
+    }
+  }
 }
+
 ion-badge {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-weight: 600;
 }

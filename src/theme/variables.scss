@@ -1,2 +1,97 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+// MoneyWise – Minimalist Light Theme
+// Pastel accent palette, white backgrounds, elegant sans-serif typography
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    // Primary – soft blue
+    --ion-color-primary: #7C9CDB;
+    --ion-color-primary-rgb: 124, 156, 219;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #6d89c1;
+    --ion-color-primary-tint: #89a6df;
+
+    // Secondary – soft lavender
+    --ion-color-secondary: #B8A9D4;
+    --ion-color-secondary-rgb: 184, 169, 212;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #a295bb;
+    --ion-color-secondary-tint: #bfb1d8;
+
+    // Tertiary – soft mint
+    --ion-color-tertiary: #A8D5BA;
+    --ion-color-tertiary-rgb: 168, 213, 186;
+    --ion-color-tertiary-contrast: #333333;
+    --ion-color-tertiary-contrast-rgb: 51, 51, 51;
+    --ion-color-tertiary-shade: #94bca4;
+    --ion-color-tertiary-tint: #b1dac1;
+
+    // Success – pastel green
+    --ion-color-success: #81C99E;
+    --ion-color-success-rgb: 129, 201, 158;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-shade: #72b18b;
+    --ion-color-success-tint: #8ecea8;
+
+    // Warning – pastel peach/amber
+    --ion-color-warning: #F2C97D;
+    --ion-color-warning-rgb: 242, 201, 125;
+    --ion-color-warning-contrast: #333333;
+    --ion-color-warning-contrast-rgb: 51, 51, 51;
+    --ion-color-warning-shade: #d5b16e;
+    --ion-color-warning-tint: #f3ce8a;
+
+    // Danger – pastel coral
+    --ion-color-danger: #E8918C;
+    --ion-color-danger-rgb: 232, 145, 140;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #cc807b;
+    --ion-color-danger-tint: #ea9c98;
+
+    // Dark
+    --ion-color-dark: #2D3436;
+    --ion-color-dark-rgb: 45, 52, 54;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+    --ion-color-dark-shade: #282e30;
+    --ion-color-dark-tint: #424849;
+
+    // Medium – muted grey
+    --ion-color-medium: #A0A8B0;
+    --ion-color-medium-rgb: 160, 168, 176;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: 255, 255, 255;
+    --ion-color-medium-shade: #8d949b;
+    --ion-color-medium-tint: #aab1b8;
+
+    // Light
+    --ion-color-light: #F7F8FA;
+    --ion-color-light-rgb: 247, 248, 250;
+    --ion-color-light-contrast: #2D3436;
+    --ion-color-light-contrast-rgb: 45, 52, 54;
+    --ion-color-light-shade: #d9dadc;
+    --ion-color-light-tint: #f8f9fb;
+
+    // Global backgrounds
+    --ion-background-color: #FFFFFF;
+    --ion-background-color-rgb: 255, 255, 255;
+    --ion-text-color: #2D3436;
+    --ion-text-color-rgb: 45, 52, 54;
+
+    // Toolbar
+    --ion-toolbar-background: #FFFFFF;
+    --ion-toolbar-color: #2D3436;
+
+    // Card
+    --ion-card-background: #FFFFFF;
+
+    // Item
+    --ion-item-background: #FFFFFF;
+
+    // Typography
+    --ion-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}

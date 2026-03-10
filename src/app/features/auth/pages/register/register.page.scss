@@ -1,12 +1,37 @@
+:host {
+    --background: #ffffff;
+}
+
+ion-list {
+    background: transparent;
+    margin-bottom: 8px;
+
+    ion-item {
+        --background: #F7F8FA;
+        --border-color: transparent;
+        --border-radius: 14px;
+        margin-bottom: 12px;
+        --padding-start: 16px;
+        --inner-padding-end: 16px;
+    }
+}
+
 .action-buttons {
-    padding: 16px 0;
+    padding: 24px 0 16px;
+
+    ion-button {
+        --border-radius: 14px;
+        font-weight: 600;
+        min-height: 50px;
+    }
 }
 
 ion-button[disabled] {
-    --opacity: 0.5;
+    --opacity: 0.4;
 }
 
 ion-text[color="danger"] p {
-    margin: 4px 0 8px 0;
-    font-size: 12px;
+    margin: 2px 0 4px 4px;
+    font-size: 0.75rem;
+    color: var(--ion-color-danger);
 }

@@ -1,1 +1,11 @@
-.photo-selector { display: flex; gap: 8px; flex-wrap: wrap; }
+.photo-selector {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    ion-button {
+        --border-radius: 14px;
+        --border-color: #E8E9EC;
+        font-size: 0.85rem;
+    }
+}

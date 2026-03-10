@@ -1,24 +1,40 @@
 .progress-item {
-margin-bottom: 12px;
+    margin-bottom: 16px;
 }
+
 .progress-header {
-display: flex;
-justify-content: space-between;
-margin-bottom: 4px;
-font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+
+    .category-name {
+        font-weight: 500;
+        color: #2D3436;
+    }
+
+    .category-amount {
+        color: #A0A8B0;
+        font-weight: 500;
+    }
 }
+
 .progress-bar-container {
-background: var(--ion-color-light);
-border-radius: 4px;
-height: 8px;
-overflow: hidden;
+    background: #F0F1F3;
+    border-radius: 8px;
+    height: 6px;
+    overflow: hidden;
 }
+
 .progress-bar-fill {
-height: 100%;
-border-radius: 4px;
-transition: width 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.4s ease;
 }
+
 .percentage {
-font-size: 0.75rem;
-color: var(--ion-color-medium);
+    font-size: 0.75rem;
+    color: #A0A8B0;
+    margin-top: 2px;
+    display: inline-block;
 }

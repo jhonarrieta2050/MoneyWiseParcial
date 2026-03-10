@@ -1,0 +1,24 @@
+<ion-header>
+<ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<app-transaction-detail
+    *ngIf="transaccion"
+    [transaccion]="transaccion"
+    (editClicked)="onEdit()"
+    (deleteClicked)="onDelete()"
+    (viewPhotos)="onViewPhotos()">
+</app-transaction-detail>
+<app-empty-state
+    *ngIf="!transaccion"
+    mensaje="Transacción no encontrada"
+    icono="alert-circle-outline">
+</app-empty-state>
+</ion-content>

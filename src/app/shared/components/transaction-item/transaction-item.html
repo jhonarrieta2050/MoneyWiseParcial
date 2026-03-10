@@ -1,0 +1,11 @@
+<ion-item button (click)="onClick()" detail>
+  <ion-icon slot="start" [name]="transaccion.categoria | categoryIcon" [style.color]="transaccion.categoria | categoryColor" size="large"></ion-icon>
+  <ion-label>
+    <h3>{{ transaccion.categoria }}</h3>
+    <p>{{ transaccion.descripcion || 'Sin descripción' }}</p>
+    <p>{{ transaccion.fecha | dateFormat }}</p>
+  </ion-label>
+  <ion-badge slot="end" [color]="transaccion.tipo === 'ingreso' ? 'success' : 'danger'">
+    {{ transaccion.tipo === 'ingreso' ? '+' : '-' }}{{ transaccion.monto | currencyFormat }}
+  </ion-badge>
+</ion-item>

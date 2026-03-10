@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprobante</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="gallery-content">
+    <img *ngIf="photoUrl" [src]="photoUrl" alt="Comprobante" />
+    <app-empty-state *ngIf="!photoUrl" mensaje="No hay comprobante" icono="image-outline"></app-empty-state>
+  </div>
+</ion-content>

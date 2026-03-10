@@ -1,0 +1,6 @@
+<div class="photo-preview" *ngIf="photoUrl">
+<img [src]="photoUrl" alt="Comprobante" />
+<ion-button fill="clear" color="danger" size="small" (click)="onRemove()">
+    <ion-icon name="close-circle"></ion-icon>
+</ion-button>
+</div>

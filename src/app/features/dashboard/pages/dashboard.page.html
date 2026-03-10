@@ -1,0 +1,70 @@
+<ion-header>
+<ion-toolbar color="primary">
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="welcome-section ion-padding">
+    <h2>Hola, {{ currentUser?.nombre || 'Usuario' }}!</h2>
+    <p>{{ mesActual | monthName }} {{ anioActual }}</p>
+</div>
+
+  <div class="cards-section ion-padding" *ngIf="resumen">
+    <app-dashboard-card
+    titulo="Saldo Actual"
+    [valor]="resumen.saldoActual"
+    color="primary"
+    icono="wallet">
+    </app-dashboard-card>
+    <app-dashboard-card
+    titulo="Ingresos del Mes"
+    [valor]="resumen.totalIngresosMes"
+    color="success"
+    icono="trending-up">
+    </app-dashboard-card>
+    <app-dashboard-card
+    titulo="Gastos del Mes"
+    [valor]="resumen.totalGastosMes"
+    color="danger"
+    icono="trending-down">
+    </app-dashboard-card>
+</div>
+
+  <ion-card *ngIf="resumen && resumen.gastosPorCategoria.length > 0" class="ion-margin">
+    <ion-card-header>
+    <ion-card-title>Gastos por Categoría</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    <app-progress-bar-category
+        *ngFor="let gasto of resumen.gastosPorCategoria"
+        [categoria]="gasto.categoria"
+        [monto]="gasto.monto"
+        [porcentaje]="gasto.porcentaje"
+        [color]="gasto.color">
+    </app-progress-bar-category>
+    </ion-card-content>
+</ion-card>
+
+<app-empty-state
+    *ngIf="!resumen || resumen.gastosPorCategoria.length === 0"
+    mensaje="Sin transacciones este mes"
+    subtitulo="Comienza registrando tus gastos e ingresos"
+    icono="bar-chart-outline">
+</app-empty-state>
+
+<div class="quick-actions ion-padding">
+    <ion-button expand="block" (click)="goToTransacciones()">
+    <ion-icon name="list" slot="start"></ion-icon>
+    Ver Transacciones
+    </ion-button>
+    <ion-button expand="block" fill="outline" (click)="goToNuevaTransaccion()">
+    <ion-icon name="add" slot="start"></ion-icon>
+    Nueva Transacción
+    </ion-button>
+</div>
+</ion-content>

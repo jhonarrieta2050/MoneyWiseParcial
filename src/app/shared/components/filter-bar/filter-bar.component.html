@@ -1,0 +1,13 @@
+<div class="filter-bar">
+  <ion-searchbar placeholder="Buscar..." (ionInput)="onSearchChange($event)" debounce="300"></ion-searchbar>
+  <div class="filter-selects">
+    <ion-select placeholder="Tipo" (ionChange)="onTipoChange($event)" interface="popover">
+      <ion-select-option value="">Todos</ion-select-option>
+      <ion-select-option *ngFor="let t of tipos" [value]="t.valor">{{ t.etiqueta }}</ion-select-option>
+    </ion-select>
+    <ion-select placeholder="Categoría" (ionChange)="onCategoriaChange($event)" interface="popover">
+      <ion-select-option value="">Todas</ion-select-option>
+      <ion-select-option *ngFor="let c of categorias" [value]="c.nombre">{{ c.nombre }}</ion-select-option>
+    </ion-select>
+  </div>
+</div>

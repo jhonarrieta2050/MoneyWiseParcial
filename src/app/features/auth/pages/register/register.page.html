@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="goToLogin()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Crear Cuenta</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <form [formGroup]="form" (ngSubmit)="onRegister()">
+        <ion-list>
+            <ion-item>
+                <ion-label position="stacked">Nombre</ion-label>
+                <ion-input formControlName="nombre" type="text" placeholder="Tu nombre"></ion-input>
+            </ion-item>
+            <ion-text color="danger" *ngIf="form.get('nombre')?.invalid && form.get('nombre')?.touched">
+                <p class="ion-padding-start"><small>El nombre debe tener al menos 2 caracteres</small></p>
+            </ion-text>
+
+            <ion-item>
+                <ion-label position="stacked">Correo electrónico</ion-label>
+                <ion-input formControlName="email" type="email" placeholder="correo@ejemplo.com"></ion-input>
+            </ion-item>
+            <ion-text color="danger" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                <p class="ion-padding-start"><small>Ingresa un correo electrónico válido</small></p>
+            </ion-text>
+
+            <ion-item>
+                <ion-label position="stacked">Contraseña</ion-label>
+                <ion-input formControlName="password" type="password" placeholder="Mínimo 6 caracteres"></ion-input>
+            </ion-item>
+            <ion-text color="danger" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+                <p class="ion-padding-start"><small>La contraseña debe tener al menos 6 caracteres</small></p>
+            </ion-text>
+        </ion-list>
+        <div class="action-buttons">
+            <ion-button type="submit" expand="block" [disabled]="form.invalid">
+                Registrarse
+            </ion-button>
+        </div>
+    </form>
+</ion-content>

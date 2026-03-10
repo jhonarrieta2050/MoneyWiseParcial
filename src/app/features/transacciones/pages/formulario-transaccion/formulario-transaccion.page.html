@@ -1,0 +1,20 @@
+<ion-header>
+<ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-title>{{ isEditMode ? 'Editar' : 'Nueva' }} Transacción</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<app-transaction-form
+    [transaccion]="transaccion || null"
+    (formSubmitted)="onFormSubmitted($event)"
+    (photoCaptured)="onPhotoCaptured()">
+</app-transaction-form>
+  <div *ngIf="capturedPhoto" class="ion-padding">
+    <app-photo-preview [photoUrl]="capturedPhoto" (removePhoto)="removePhoto()"></app-photo-preview>
+</div>
+</ion-content>

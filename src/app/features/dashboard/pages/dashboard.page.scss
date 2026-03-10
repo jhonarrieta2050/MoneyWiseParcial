@@ -1,0 +1,6 @@
+.welcome-section {
+  h2 { margin: 0 0 4px; font-weight: bold; }
+  p { color: var(--ion-color-medium); margin: 0; }
+}
+.cards-section { display: flex; flex-direction: column; gap: 8px; }
+.quick-actions { display: flex; flex-direction: column; gap: 12px; }

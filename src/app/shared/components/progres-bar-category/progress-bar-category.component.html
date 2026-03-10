@@ -1,0 +1,10 @@
+<div class="progress-item">
+<div class="progress-header">
+    <span class="category-name">{{ categoria }}</span>
+    <span class="category-amount">{{ monto | currencyFormat }}</span>
+</div>
+<div class="progress-bar-container">
+    <div class="progress-bar-fill" [style.width.%]="porcentaje" [style.background-color]="color"></div>
+</div>
+<span class="percentage">{{ porcentaje | number:'1.0-0' }}%</span>
+</div>

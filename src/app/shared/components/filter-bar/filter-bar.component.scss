@@ -1,0 +1,6 @@
+.filter-bar { padding: 8px; }
+.filter-selects {
+display: flex;
+gap: 8px;
+ion-select { flex: 1; border: 1px solid var(--ion-color-light-shade); border-radius: 8px; padding: 4px 8px; }
+}

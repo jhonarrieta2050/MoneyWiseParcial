@@ -1,0 +1,6 @@
+.amount-display {
+  font-size: 1.8rem;
+  font-weight: bold;
+  &.ingreso { color: var(--ion-color-success); }
+  &.gasto { color: var(--ion-color-danger); }
+}

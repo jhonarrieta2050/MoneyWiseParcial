@@ -1,0 +1,8 @@
+.detail-header {
+display: flex;
+align-items: center;
+gap: 12px;
+ion-icon { font-size: 2rem; }
+}
+.amount-section { text-align: center; padding: 16px 0; }
+.action-buttons { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }

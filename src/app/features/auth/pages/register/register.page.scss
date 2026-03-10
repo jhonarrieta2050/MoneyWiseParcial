@@ -1,0 +1,12 @@
+.action-buttons {
+    padding: 16px 0;
+}
+
+ion-button[disabled] {
+    --opacity: 0.5;
+}
+
+ion-text[color="danger"] p {
+    margin: 4px 0 8px 0;
+    font-size: 12px;
+}

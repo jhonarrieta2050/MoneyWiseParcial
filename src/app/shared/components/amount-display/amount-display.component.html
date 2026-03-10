@@ -1,0 +1,4 @@
+<div class="amount-display" [class.ingreso]="tipo === 'ingreso'" [class.gasto]="tipo === 'gasto'">
+  <span class="sign">{{ tipo === 'ingreso' ? '+' : '-' }}</span>
+  <span class="amount">{{ monto | currencyFormat }}</span>
+</div>

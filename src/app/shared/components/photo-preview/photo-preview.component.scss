@@ -1,0 +1,6 @@
+.photo-preview {
+position: relative;
+display: inline-block;
+img { width: 100%; max-width: 200px; border-radius: 8px; }
+ion-button { position: absolute; top: -8px; right: -8px; }
+}

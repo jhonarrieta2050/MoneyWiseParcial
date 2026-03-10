@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>MoneyWise</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <div class="login-container">
+        <div class="logo-section">
+            <ion-icon name="wallet" class="logo-icon"></ion-icon>
+            <h1>MoneyWise</h1>
+            <p>Gestiona tus finanzas personales</p>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onLogin()">
+            <ion-list>
+                <ion-item>
+                    <ion-label position="stacked">Correo electrónico</ion-label>
+                    <ion-input formControlName="email" type="email" placeholder="correo@ejemplo.com"></ion-input>
+                </ion-item>
+                <ion-text color="danger" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                    <p class="ion-padding-start"><small>Ingresa un correo electrónico válido</small></p>
+                </ion-text>
+
+                <ion-item>
+                    <ion-label position="stacked">Contraseña</ion-label>
+                    <ion-input formControlName="password" type="password" placeholder="••••••"></ion-input>
+                </ion-item>
+                <ion-text color="danger" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+                    <p class="ion-padding-start"><small>La contraseña debe tener al menos 6 caracteres</small></p>
+                </ion-text>
+            </ion-list>
+            <div class="action-buttons">
+                <ion-button type="submit" expand="block" [disabled]="form.invalid">
+                    Iniciar Sesión
+                </ion-button>
+                <ion-button type="button" expand="block" fill="outline" (click)="goToRegister()">
+                    Crear cuenta
+                </ion-button>
+            </div>
+        </form>
+    </div>
+</ion-content>
